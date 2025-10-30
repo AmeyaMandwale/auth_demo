@@ -10,6 +10,4 @@ const fetchActivity = async () => {
       }
     };
 
-    fetchPRs();
-    fetchActivity();
-  }, [accessToken]);
+   
