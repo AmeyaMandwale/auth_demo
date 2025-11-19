@@ -13,3 +13,14 @@ const fetchActivity = async () => {
     fetchPRs();
     fetchActivity();
   }, [accessToken]);
+
+ if (provider == "github")
+        {
+            var parts = pr.Repository.Name.Split('/');
+            await _githubComment.AddCommentAsync(parts[0], parts[1], pr.ExternalId!, finalComment);
+        }
+        else
+        {
+            await _gitlabComment.AddCommentAsync(pr.ExternalId!, finalComment);
+        }
+
