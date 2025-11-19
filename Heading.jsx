@@ -32,8 +32,7 @@ public async Task<List<GitHubFileDto>> GetPRFilesAsync(
 
             res.EnsureSuccessStatusCode();
 
-            var json = await res.Content.ReadAsStringAsync();
-            var files = JsonSerializer.Deserialize<List<GitHubFileDto>>(json);
+      
 
             return files ?? new List<GitHubFileDto>();
         }
