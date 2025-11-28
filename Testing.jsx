@@ -10,4 +10,4 @@
         var json = await response.Content.ReadAsStringAsync();
         return JsonSerializer.Deserialize<List<GitHubFileDto>>(json)
                ?? new List<GitHubFileDto>();
-    }
+    
